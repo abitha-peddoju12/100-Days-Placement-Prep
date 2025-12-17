@@ -1,0 +1,11 @@
+public class CountOddNumbers {
+    public static void main(String[] args){
+        int[] arr = {1,2,3,5,10};
+        int count=0;
+        for (int num : arr) {
+            if (num % 2 != 0) {
+            count++;
+        }
+    }
+       System.out.println("Number of odd elements: " + count);
+}}
