@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    static int secondLargestDigit(int n){
+        int max = -1;
+        int secondMax = -1;
+        while(n>0){
+            int digit = n % 10;
+            if(digit > max){
+                secondMax = max;
+                max = digit;
+            }
+            else if (digit > secondMax && digit != max) {
+                secondMax = digit;
+            }
+            n = n / 10;
+        }
+        return secondMax;
+    }
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("n = ");
+        int n = sc.nextInt();
+        System.out.println(secondLargestDigit(n));
+    }
+}
