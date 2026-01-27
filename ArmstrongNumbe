@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    static boolean ArmstrongNumber(int n){
+        int sum = 0;
+        int original = n;
+        while(n>0){
+            int digit = n % 10;
+            sum = sum + digit*digit*digit;
+            n = n / 10;
+        }
+        return sum == original;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("n = ");
+        int n = sc.nextInt();
+        if(ArmstrongNumber(n)){
+            System.out.println("Armstrong");
+        }
+        else{
+            System.out.println("Not Armstrong");
+        }
+    }
+} 
